@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Desafio MTD - Front-end</title>
-</head>
-<body>
-  <header id="bg-header">
-    <img src="images/bg-main-mobile.png" alt="">
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Desafio MTD - Front-end</title>
+    </head>
+    <body>
+        <div class="page">
+            <div id="bg-page">
+                <img src="images/bg-main-mobile.png" alt="" />
+            </div>
 
-  <div id="card-container">
-    <img id="card-back" src="images/bg-card-back.png" alt="">
+            <div class="info-cards">
+                <div class="img-cards">
+                    <img
+                        src="images/bg-card-back.png"
+                        alt=""
+                        id="card-back"
+                        width="330"
+                        height="180"
+                    />
+                    <img
+                        src="images/bg-card-front.png"
+                        alt=""
+                        id="card-front"
+                        width="330"
+                        height="180"
+                    />
+                    <img 
+                      src="images/card-logo.svg" alt=""
+                      id="card-logo"
+                      width="66"
+                      height="37"
+                    />
+                </div>
 
-    <img id="card-front" src="images/bg-card-front.png" alt="">
-  </div>
+                <div class="forms">
+                  <div class="input-separator">
 
-  <div id="form">
-    <label for="card-holder">
-      CARDHOLDER NAME
-      <input id="card-holder" type="text">
-  </label>
-    
-    <label for="">CARD NUMBER</label>
-    <input type="number">
-    <label for="">EXP.DATE (MM/YY) CVC</label>
-    <input type="number">
-    <input type="number">
-  </div>
-</body>
+                    <label for="info-name">CARDHOLDER NAME</label>
+                    <input type="text" id="info-name" placeholder="e.g. Jane Appleseed" required>
+
+                    <label for="info-card-number">CARDHOLDER NAME</label>
+                    <input type="number" id="info-card-number" placeholder="e.g. 1234 5678 9123 0000" required>
+
+                    <div class="col-3">
+                      <div class="input-separator">
+                          <label for="info-exp-date-month">EXP.DATE</label>
+                          <input type="number" min="01" max="12" id="info-exp-date" placeholder="MM" required>
+                      </div>
+                      
+                      <div class="input-separator">
+                          <label for="info-exp-date-year">(MM/YY)</label>
+                          <input type="number" min="23" max="30" id="info-exp-date-year" placeholder="YY" required>
+                      </div>
+          
+                      <div class="input-separator">
+                          <label for="info-code-security">CVC</label>
+                          <input type="number" id="info-code-security"
+                          min="1" max="999" maxlength="3" placeholder="e. g. 123" required>
+                      </div>
+                  </div>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
