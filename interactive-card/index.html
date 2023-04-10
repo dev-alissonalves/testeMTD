@@ -35,43 +35,85 @@
                         width="330"
                         height="180"
                     />
-                    <img 
-                      src="images/card-logo.svg" alt=""
-                      id="card-logo"
-                      width="66"
-                      height="37"
+                    <img
+                        src="images/card-logo.svg"
+                        alt=""
+                        id="card-logo"
+                        width="66"
+                        height="37"
                     />
                 </div>
 
-                <div class="forms">
-                  <div class="input-separator">
+                <form id="my-form" class="forms">
+                    <div class="input-separator">
+                        <label for="info-name">CARDHOLDER NAME</label>
+                        <input
+                            type="text"
+                            id="info-name"
+                            placeholder="e.g. Jane Appleseed"
+                            required
+                        />
 
-                    <label for="info-name">CARDHOLDER NAME</label>
-                    <input type="text" id="info-name" placeholder="e.g. Jane Appleseed" required>
+                        <label for="info-card-number">CARD NUMBER</label>
+                        <input
+                            type="number"
+                            id="info-card-number"
+                            placeholder="e.g. 1234 5678 9123 0000"
+                            required
+                        />
 
-                    <label for="info-card-number">CARDHOLDER NAME</label>
-                    <input type="number" id="info-card-number" placeholder="e.g. 1234 5678 9123 0000" required>
+                        <p hidden>Wrong format, numbers only</p>
 
-                    <div class="col-3">
-                      <div class="input-separator">
-                          <label for="info-exp-date-month">EXP.DATE</label>
-                          <input type="number" min="01" max="12" id="info-exp-date" placeholder="MM" required>
-                      </div>
-                      
-                      <div class="input-separator">
-                          <label for="info-exp-date-year">(MM/YY)</label>
-                          <input type="number" min="23" max="30" id="info-exp-date-year" placeholder="YY" required>
-                      </div>
-          
-                      <div class="input-separator">
-                          <label for="info-code-security">CVC</label>
-                          <input type="number" id="info-code-security"
-                          min="1" max="999" maxlength="3" placeholder="e. g. 123" required>
-                      </div>
-                  </div>
+                        <div class="col-3">
+                            <div class="input-separator">
+                                <div class="input-separator">
+                                    <label for="info-exp-date-month"
+                                        >EXP.DATE</label
+                                    >
+                                    <input
+                                        type="number"
+                                        min="01"
+                                        max="12"
+                                        id="info-exp-date"
+                                        placeholder="MM"
+                                        required
+                                    />
+                                </div>
+                                <p hidden>Cant't be blank</p>
+                            </div>
 
-                  </div>
-                </div>
+                            <div class="input-separator">
+                                <label for="info-exp-date-year">(MM/YY)</label>
+                                <input
+                                    type="number"
+                                    min="23"
+                                    max="30"
+                                    id="info-exp-date-year"
+                                    placeholder="YY"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-separator">
+                                <div class="input-separator">
+                                    <label for="info-code-security">CVC</label>
+                                    <input
+                                        type="number"
+                                        id="info-code-security"
+                                        min="1"
+                                        max="999"
+                                        maxlength="3"
+                                        placeholder="e. g. 123"
+                                        required
+                                    />
+                                </div>
+
+                                <p hidden>Cant't be blank</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button" form="my-form">Confirm</button>
+                </form>
             </div>
         </div>
     </body>
