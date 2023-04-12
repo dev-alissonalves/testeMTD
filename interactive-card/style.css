@@ -189,28 +189,26 @@ span {
     padding: 1rem 1.5rem;
     opacity: 0.5;
 }
-
-.input-separator input:nth-last-child(1){
-    margin-bottom: 2rem;
-} 
-
 /* .input-separator input:invalid{
     border: .15rem solid red;
 } */
 
 .input-separator p {
-    margin-top: 0.8rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: red;
 }
 
-.input-separator .hidden {
+/* .input-separator > .hidden-card-name, .hidden-card-number, .hidden-exp-date, .hidden-cvc{
+    display: visible;
+} */
+
+.hidden-card-name{
     display: none;
 }
 
-.button {
+.button-send, .button-continue {
     font-family: "Space Grotesk", sans-serif;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     font-size: 2rem;
     border: none;
     width: 100%;
@@ -220,7 +218,7 @@ span {
     color: white;
 }
 
-.button:hover {
+.button-send:hover, .button-continue:hover {
     background: hsla(278, 68%, 11%, 0.864);
 }
 
