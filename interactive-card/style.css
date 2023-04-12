@@ -1,58 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     font-size: 62.5%;
 }
 
-body{
-    font-family: 'Space Grotesk', sans-serif;
+body {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 1.2rem;
     letter-spacing: 2px;
     background-color: black;
     overflow: hidden;
 }
 
-.page{
+.page {
     position: relative;
     width: 40rem;
     height: 100vh;
     margin: auto;
 }
 
-#bg-page{
+#bg-page {
     width: 100%;
     max-height: 30%;
 }
 
-#bg-page img{
+#bg-page img {
     object-fit: cover;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
-#card-back{
+#card-back {
     position: absolute;
     top: 3rem;
     right: 2rem;
-    width:30rem;
+    width: 30rem;
     height: 16rem;
 }
 
-#card-front{
+#card-front {
     position: absolute;
     top: 12rem;
     left: 2rem;
-    width:30rem;
+    width: 30rem;
     height: 16rem;
 }
 
-#card-logo{
+#card-logo {
     position: absolute;
     top: 14rem;
     left: 4rem;
@@ -60,78 +60,148 @@ body{
     height: 3rem;
 }
 
-span{
+span {
     position: absolute;
     color: white;
 }
 
-#number-card{
+#number-card {
     position: relative;
     top: 0;
 }
 
-.forms{
+.infos-text {
+    color: white;
+    position: absolute;
+    width: 30rem;
+    height: 16rem;
+    top: 12rem;
+    left: 2rem;
+    z-index: 2;
+}
+
+.infos-text .card-name {
+    text-transform: uppercase;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    font-size: 1.3rem;
+    top: 13rem;
+    left: 2rem;
+    font-size: 1rem;
+}
+.infos-text .card-number {
+    letter-spacing: 0.3rem;
+    position: relative;
+    text-align: center;
+    font-size: 1.85rem;
+    top: 8rem;
+}
+
+.infos-text .card-exp-date {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    font-size: 1rem;
+    top: 9rem;
+    left: 24rem;
+}
+
+.infos-text .card-info-cvc {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    font-size: 1.3rem;
+    top: -6rem;
+    left: 25rem;
+}
+
+.page .hidden-div {
+    display: none;
+}
+
+.forms {
     margin: 0;
     background-color: white;
     height: 100vh;
-    padding: 7rem 2.5rem 4rem 2.5rem; 
+    padding: 7rem 2.5rem 4rem 2.5rem;
 }
 
-.input-separator{
+.success {
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+    padding: 10rem 2.5rem 4rem 2.5rem;
+}
+
+.success img {
+    margin-bottom: 3rem;
+}
+
+.success #title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.success #subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: rgba(128, 128, 128, 0.887);
+}
+
+.input-separator {
     display: flex;
     flex-direction: column;
 }
 
-.input-separator .col-3{
+.input-separator .col-3 {
     display: flex;
     gap: 1rem;
 }
-.col-3 > div:nth-child(1){
+.col-3 > div:nth-child(1) {
     flex-basis: 25%;
 }
-.col-3 > div:nth-child(2){
+.col-3 > div:nth-child(2) {
     flex-basis: 25%;
 }
-.col-3 > div:nth-child(3){
+.col-3 > div:nth-child(3) {
     flex-basis: 50%;
 }
 
-.input-separator label{
+.input-separator label {
     margin-top: 1.6rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
-.input-separator input{
-    font-family: 'Space Grotesk', sans-serif;
+.input-separator input {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.6rem;
     height: 5rem;
-    border: 1px solid #E6E6F0;
+    border: 1px solid rgba(128, 128, 128, 0.561);
     border-radius: 8px;
     background: white;
     padding: 1rem 1.5rem;
     opacity: 0.5;
 }
 
-.input-separator input:focus{
-    border: 1px solid black;
-}
-
-.input-separator input:invalid{
+/* .input-separator input:invalid{
     border: .15rem solid red;
-}
+} */
 
 .input-separator p {
-    margin-top: .8rem;
-    font-size: .9rem;
+    margin-top: 0.8rem;
+    font-size: 0.7rem;
     color: red;
 }
 
-.input-separator .hidden{
-    display: inline;
+.input-separator .hidden {
+    display: none;
 }
 
-.button{
+.button {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     margin-top: 1.5rem;
     font-size: 2rem;
     border: none;
@@ -142,36 +212,42 @@ span{
     color: white;
 }
 
-.button:hover{
+.button:hover {
     background: hsla(278, 68%, 11%, 0.864);
 }
 
-@media (min-width: 1440px)
-{
-    body{
+@media (min-width: 1440px) {
+    body {
         font-size: 2rem;
     }
 
-    .page{
+    .page {
         display: flex;
         position: relative;
         width: 100%;
     }
 
-    div #bg-page{
+    div #bg-page {
         background-image: url(images/bg-main-desktop.png);
         max-width: 30%;
         height: 100vh;
     }
 
-    #bg-page img{
+    #bg-page img {
         object-fit: cover;
         max-width: 100%;
         height: 100vh;
     }
 
-    .infos-text{
-        color:white;
+    .info-cards {
+        display: grid;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .infos-text {
+        color: white;
         position: absolute;
         width: 45rem;
         height: 25rem;
@@ -179,8 +255,9 @@ span{
         left: 23rem;
         z-index: 2;
     }
-    
-    .infos-text .card-name{
+
+    .infos-text .card-name {
+        text-transform: uppercase;
         display: inline-block;
         width: auto;
         position: relative;
@@ -189,24 +266,24 @@ span{
         left: 3rem;
     }
 
-    .infos-text .card-number{
-        letter-spacing: .3rem;
+    .infos-text .card-number {
+        letter-spacing: 0.3rem;
         position: relative;
         text-align: center;
         font-size: 3rem;
         top: 13rem;
     }
 
-    .infos-text .card-exp-date{
+    .infos-text .card-exp-date {
         display: inline-block;
         width: auto;
         position: relative;
         font-size: 1.3rem;
         top: 14.5rem;
-        left: 35rem;
+        left: 36.8rem;
     }
 
-    .infos-text .card-info-cvc{
+    .infos-text .card-info-cvc {
         display: inline-block;
         width: auto;
         position: relative;
@@ -214,42 +291,52 @@ span{
         top: 33.5rem;
         left: 40rem;
     }
-    .info-cards{
-        display: grid;
-        width: 70%;
-        height: 100vh;
-        background-color: white;
-    }
 
-    .info-cards #my-form{
-        max-width: 55rem;
+    .info-cards #my-form {
+        width: 52rem;
         height: 100%;
-        margin-left: 40rem;
+        margin-left: 50rem;
     }
 
-    #card-back{
+    #card-back {
         width: 45rem;
         height: 25rem;
         top: 50rem;
         left: 33rem;
     }
-    
-    #card-front{
+
+    #card-front {
         width: 45rem;
         height: 25rem;
         top: 21rem;
         left: 23rem;
     }
-    
-    #card-logo{
+
+    #card-logo {
         top: 24rem;
         left: 25rem;
         width: 9rem;
         height: 5rem;
     }
 
+    .success {
+        position: absolute;
+        width: 52rem;
+        height: 100%;
+        margin-left: 50rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-separator input {
+        font-size: 2.2rem;
+    }
+
     .input-separator p {
-        margin-top: .8rem;
+        margin-top: 0.8rem;
         font-size: 1.2rem;
         color: red;
     }
