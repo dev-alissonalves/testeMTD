@@ -23,7 +23,11 @@
                 <div class="infos-text">
                     <p class="card-name">JANE APPLESEED</p>
                     <p class="card-number">0000 0000 0000 0000</p>
-                    <p class="card-exp-date">00/00</p>
+                    <div class="card-exp-date">
+                        <p id="card-exp-date-month">MM</p>
+                        /
+                        <p id="card-exp-date-year">YY</p>
+                    </div>
                     <p class="card-info-cvc">000</p>
                 </div>
                 
@@ -39,7 +43,7 @@
 
                 <form id="my-form" class="forms">
                     <div class="input-separator">
-                        <label for="info-card-name">CARDHOLDER NAME</label>
+                        <label for="info-card-name" id="first-label">CARDHOLDER NAME</label>
                         <input
                             type="text"
                             id="info-card-name"

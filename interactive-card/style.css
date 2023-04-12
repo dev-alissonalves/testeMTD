@@ -99,11 +99,11 @@ span {
 }
 
 .infos-text .card-exp-date {
-    display: inline-block;
-    width: auto;
+    display: flex;
+    width: 2rem;
     position: relative;
-    font-size: 1rem;
-    top: 9rem;
+    font-size: .8rem;
+    top: 9.3rem;
     left: 24rem;
 }
 
@@ -111,9 +111,8 @@ span {
     display: inline-block;
     width: auto;
     position: relative;
-    font-size: 1.3rem;
-    top: -6rem;
-    left: 25rem;
+    top: -7rem;
+    left: 29rem;
 }
 
 .page .hidden-div {
@@ -153,6 +152,7 @@ span {
 .input-separator {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
 }
 
 .input-separator .col-3 {
@@ -167,6 +167,11 @@ span {
 }
 .col-3 > div:nth-child(3) {
     flex-basis: 50%;
+}
+
+.input-separator #first-label {
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
 }
 
 .input-separator label {
@@ -185,6 +190,10 @@ span {
     opacity: 0.5;
 }
 
+.input-separator input:nth-last-child(1){
+    margin-bottom: 2rem;
+} 
+
 /* .input-separator input:invalid{
     border: .15rem solid red;
 } */
@@ -200,7 +209,6 @@ span {
 }
 
 .button {
-    margin: 0;
     font-family: "Space Grotesk", sans-serif;
     margin-top: 1.5rem;
     font-size: 2rem;
@@ -268,6 +276,7 @@ span {
 
     .infos-text .card-number {
         letter-spacing: 0.3rem;
+        width: auto;
         position: relative;
         text-align: center;
         font-size: 3rem;
@@ -275,13 +284,14 @@ span {
     }
 
     .infos-text .card-exp-date {
-        display: inline-block;
-        width: auto;
+        display: inline-flex;
+        width: 1rem;
         position: relative;
         font-size: 1.3rem;
-        top: 14.5rem;
-        left: 36.8rem;
+        top: 14.3rem;
+        left: 35.5rem;
     }
+    
 
     .infos-text .card-info-cvc {
         display: inline-block;
@@ -289,7 +299,7 @@ span {
         position: relative;
         font-size: 1.8rem;
         top: 33.5rem;
-        left: 40rem;
+        left: 43rem;
     }
 
     .info-cards #my-form {

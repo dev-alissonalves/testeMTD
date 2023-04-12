@@ -8,7 +8,8 @@ const inputValueCardCodeSecurity = document.getElementById("info-code-security")
 // Pegando os campos do cartão nos quais os valores serão inseridos em tempo real
 let cardFieldName = document.querySelector(".card-name");
 let cardFieldNumber = document.querySelector(".card-number");
-let cardFieldExpDate = document.querySelector(".card-exp-date");
+let cardFieldExpDateMonth = document.querySelector("#card-exp-date-month");
+let cardFieldExpDateYear = document.querySelector("#card-exp-date-year");
 let cardFieldCVC = document.querySelector(".card-info-cvc");
 
 inputValueCardholderName.oninput = () => {
@@ -20,7 +21,11 @@ inputValueCardNumber.oninput = () => {
 }
 
 inputValueCardExpDateMonth.oninput = () => {
-    cardFieldExpDate.innerText = inputValueCardExpDateMonth.value
+    cardFieldExpDateMonth.innerText = inputValueCardExpDateMonth.value
+}
+
+inputValueCardExpDateYear.oninput = () => {
+    cardFieldExpDateYear.innerText = inputValueCardExpDateYear.value
 }
 
 inputValueCardCodeSecurity.oninput = () => {
