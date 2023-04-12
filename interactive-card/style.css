@@ -170,6 +170,50 @@ span{
         height: 100vh;
     }
 
+    .infos-text{
+        color:white;
+        position: absolute;
+        width: 45rem;
+        height: 25rem;
+        top: 21rem;
+        left: 23rem;
+        z-index: 2;
+    }
+    
+    .infos-text .card-name{
+        display: inline-block;
+        width: auto;
+        position: relative;
+        font-size: 1.3rem;
+        top: 21rem;
+        left: 3rem;
+    }
+
+    .infos-text .card-number{
+        letter-spacing: .3rem;
+        position: relative;
+        text-align: center;
+        font-size: 3rem;
+        top: 13rem;
+    }
+
+    .infos-text .card-exp-date{
+        display: inline-block;
+        width: auto;
+        position: relative;
+        font-size: 1.3rem;
+        top: 14.5rem;
+        left: 35rem;
+    }
+
+    .infos-text .card-info-cvc{
+        display: inline-block;
+        width: auto;
+        position: relative;
+        font-size: 1.8rem;
+        top: 33.5rem;
+        left: 40rem;
+    }
     .info-cards{
         display: grid;
         width: 70%;
