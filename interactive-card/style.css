@@ -127,11 +127,11 @@ span {
 }
 
 .success {
-    margin: 0 auto;
+    margin: 0;
+    height: 100vh;
     text-align: center;
     background-color: white;
-    height: 100vh;
-    padding: 10rem 2.5rem 4rem 2.5rem;
+    padding: 12rem 2.5rem 4rem 2.5rem;
 }
 
 .success img {
@@ -189,21 +189,9 @@ span {
     padding: 1rem 1.5rem;
     opacity: 0.5;
 }
-/* .input-separator input:invalid{
-    border: .15rem solid red;
-} */
 
-.input-separator p {
-    font-size: 1rem;
-    color: red;
-}
-
-/* .input-separator > .hidden-card-name, .hidden-card-number, .hidden-exp-date, .hidden-cvc{
-    display: visible;
-} */
-
-.hidden-card-name{
-    display: none;
+input:active, input:focus{
+    border: 3px solid #611DBC;
 }
 
 .button-send, .button-continue {
@@ -220,6 +208,16 @@ span {
 
 .button-send:hover, .button-continue:hover {
     background: hsla(278, 68%, 11%, 0.864);
+}
+
+.errorMessageName, .errorMessageNumber, .errorMessageMonth, .errorMessageYear, .errorMessageCVC{
+    margin-top: .8rem;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.hidden{
+    display: none;
 }
 
 @media (min-width: 1440px) {
@@ -301,7 +299,7 @@ span {
     }
 
     .info-cards #my-form {
-        width: 52rem;
+        width: 53rem;
         height: 100%;
         margin-left: 50rem;
     }
@@ -329,7 +327,7 @@ span {
 
     .success {
         position: absolute;
-        width: 52rem;
+        width: 53rem;
         height: 100%;
         margin-left: 50rem;
 
@@ -341,11 +339,5 @@ span {
 
     .input-separator input {
         font-size: 2.2rem;
-    }
-
-    .input-separator p {
-        margin-top: 0.8rem;
-        font-size: 1.2rem;
-        color: red;
     }
 }
