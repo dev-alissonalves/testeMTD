@@ -1,133 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/favicon-32x32.png"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <title>Desafio MTD - Front-end</title>
-    </head>
-    <body>
-        <div class="page">
-            <div id="bg-page">
-                <img src="images/bg-main-mobile.png" alt="" />
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Desafio MTD - Front-end</title>
+  </head>
+  <body>
+    <div class="page">
+      <div id="bg-page">
+        <img src="images/bg-main-mobile.png" alt="" />
+      </div>
 
-            <div class="info-cards">
-                <div class="infos-text">
-                    <p class="card-name">JANE APPLESEED</p>
-                    <p class="card-number">**** **** **** ****</p>
-                    <div class="card-exp-date">
-                        <p id="card-exp-date-month">MM</p>
-                        /
-                        <p id="card-exp-date-year">YY</p>
-                    </div>
-                    <p class="card-info-cvc">000</p>
-                </div>
-                
-                <div class="img-cards">
-                    <img src="images/bg-card-back.png" alt="" id="card-back" />
-                    <img
-                        src="images/bg-card-front.png"
-                        alt=""
-                        id="card-front"
-                    />
-                    <img src="images/card-logo.svg" alt="" id="card-logo" />
-                </div>
-
-                <form id="my-form" class="forms">
-                    <div class="input-separator">
-                        <label for="info-card-name" id="first-label">CARDHOLDER NAME</label>
-                        <input
-                            type="text"
-                            id="info-card-name"
-                            placeholder="e. g. Jane Appleseed"
-                            required
-                        />
-
-                        <p class="errorMessageName hidden">Can't be a blank</p>
-                        
-                        <label for="info-card-number">CARD NUMBER</label>
-                        <input
-                            type="number"
-                            id="info-card-number"
-                            placeholder="e.g. 1234 5678 9123 0000"
-                            minlength="16"
-                            maxlength="16"
-                            required
-                        />
-
-                        <p class="errorMessageNumber hidden">Can't be a blank</p>
-
-                        <div class="col-3">
-                            <div class="input-separator">
-                                <div class="input-separator">
-                                    <label for="info-exp-date-month"
-                                        >EXP. DATE</label
-                                    >
-                                    <input
-                                        type="number"
-                                        min="01"
-                                        max="12"
-                                        minlength="2"
-                                        maxlength="2"
-                                        id="info-exp-date-month"
-                                        placeholder="MM"
-                                        required
-                                    />
-                                </div>
-                                <p class="errorMessageMonth hidden">Can't be a blank</p>
-                            </div>
-
-                            <div class="input-separator">
-                                <label for="info-exp-date-year">(MM/YY)</label>
-                                <input
-                                    type="number"
-                                    min="23"
-                                    max="33"
-                                    minlength="2"
-                                    maxlength="2"
-                                    id="info-exp-date-year"
-                                    placeholder="YY"
-                                    required
-                                />
-                                <p class="errorMessageYear hidden">Can't be a blank</p>
-                            </div>
-
-                            <div class="input-separator">
-                                <div class="input-separator">
-                                    <label for="info-code-security">CVC</label>
-                                    <input
-                                        type="number"
-                                        id="info-code-security"
-                                        min="1"
-                                        max="999"
-                                        minlength="3"
-                                        maxlength="3"
-                                        placeholder="e. g. 123"
-                                        required
-                                    />
-                                    <p class="errorMessageCVC hidden">Can't be a blank</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="button-send" form="my-form">Confirm</button>
-                </form>
-
-                <div class="success hidden-div">
-                    <img src="images/icon-complete.svg" alt="">
-                    <p id="title">THANK YOU!</p>
-                    <p id="subtitle">We've added your card details</p>
-                    <button class="button-continue">Continue</button>
-                </div>
-            </div>
+      <div class="info-cards">
+        <div class="infos-text">
+          <p class="card-name">JANE APPLESEED</p>
+          <p class="card-number">**** **** **** ****</p>
+          <div class="card-exp-date">
+            <p id="card-exp-date-month">MM</p>
+            /
+            <p id="card-exp-date-year">YY</p>
+          </div>
+          <p class="card-info-cvc">000</p>
         </div>
-        <script src="script.js"></script>
-    </body>
+
+        <div class="img-cards">
+          <img src="images/bg-card-back.png" alt="" id="card-back" />
+          <img src="images/bg-card-front.png" alt="" id="card-front" />
+          <img src="images/card-logo.svg" alt="" id="card-logo" />
+        </div>
+
+        <form id="my-form" class="forms">
+          <div class="input-separator">
+            <label for="info-card-name" id="first-label">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              id="info-card-name"
+              placeholder="e. g. Jane Appleseed"
+              pattern="[A-Za-z\s]+"
+              onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 32"
+              required
+            />
+
+            <p class="errorMessageName hidden">Can't be a blank</p>
+
+            <label for="info-card-number">CARD NUMBER</label>
+            <input
+              type="number"
+              id="info-card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              minlength="16"
+              maxlength="16"
+              required
+            />
+
+            <p class="errorMessageNumber hidden">Can't be a blank</p>
+
+            <div class="col-3">
+              <div class="input-separator">
+                <div class="input-separator">
+                  <label for="info-exp-date-month">EXP. DATE</label>
+                  <input
+                    type="number"
+                    min="01"
+                    max="12"
+                    minlength="2"
+                    maxlength="2"
+                    id="info-exp-date-month"
+                    placeholder="MM"
+                    required
+                  />
+                </div>
+                <p class="errorMessageMonth hidden">Can't be a blank</p>
+              </div>
+
+              <div class="input-separator">
+                <label for="info-exp-date-year">(MM/YY)</label>
+                <input
+                  type="number"
+                  min="23"
+                  max="33"
+                  minlength="2"
+                  maxlength="2"
+                  id="info-exp-date-year"
+                  placeholder="YY"
+                  required
+                />
+                <p class="errorMessageYear hidden">Can't be a blank</p>
+              </div>
+
+              <div class="input-separator">
+                <div class="input-separator">
+                  <label for="info-code-security">CVC</label>
+                  <input
+                    type="number"
+                    id="info-code-security"
+                    min="1"
+                    max="999"
+                    minlength="3"
+                    maxlength="3"
+                    placeholder="e. g. 123"
+                    required
+                  />
+                  <p class="errorMessageCVC hidden">Can't be a blank</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button-send" form="my-form">Confirm</button>
+        </form>
+
+        <div class="success hidden-div">
+          <img src="images/icon-complete.svg" alt="" />
+          <p id="title">THANK YOU!</p>
+          <p id="subtitle">We've added your card details</p>
+          <button class="button-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

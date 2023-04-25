@@ -87,64 +87,68 @@ inputValueCardCodeSecurity.oninput = () => {
 };
 
 buttonSubmit.addEventListener("click", (evt) => {
-    let flagError = 0;
     evt.preventDefault();
+
+    let formIsvalid = true;
 
     if (!inputValueCardholderName.value) {
         nameError.classList.remove("hidden");
+        formIsvalid = false;
     } else {
         nameError.classList.add("hidden");
     }
     
     if (!inputValueCardNumber.value) {
         numberError.classList.remove("hidden");
+        formIsvalid = false;
     } else if (Number(inputValueCardNumber.value.length) < 16) {
         numberError.classList.remove("hidden");
         numberError.textContent = "Wrong format, numbers only";
+        formIsvalid = false;
     } else {
         numberError.classList.add("hidden");
     }
 
     if (!inputValueCardExpDateMonth.value) {
         monthError.classList.remove("hidden");
+        formIsvalid = false;
     } else if (
         Number(inputValueCardExpDateMonth.value) < 1 ||
         Number(inputValueCardExpDateMonth.value) > 12
     ) {
         monthError.classList.remove("hidden");
         monthError.textContent = "1-12 only";
+        formIsvalid = false;
     } else {
         monthError.classList.add("hidden");
     }
 
     if (!inputValueCardExpDateYear.value) {
         yearError.classList.remove("hidden");
+        formIsvalid = false;
     } else if (
         Number(inputValueCardExpDateYear.value) < 23 ||
         Number(inputValueCardExpDateYear.value) > 33
     ) {
         yearError.classList.remove("hidden");
         yearError.textContent = "23-33 only"; // 10 anos geralmente é a validade de um cartão de crédito convencional
+        formIsvalid = false;
     } else {
         yearError.classList.add("hidden");
     }
 
     if (!inputValueCardCodeSecurity.value) {
         cvcError.classList.remove("hidden");
+                formIsvalid = false;
     } else if (inputValueCardCodeSecurity.value.length > 3){
         cvcError.classList.remove("hidden");
         cvcError.textContent = "CVC Invalid";
+        formIsvalid = false;
     }else {
         cvcError.classList.add("hidden");
     }
         
-    if (
-        inputValueCardholderName.value &&
-        inputValueCardNumber.value &&
-        inputValueCardExpDateMonth.value &&
-        inputValueCardExpDateYear.value &&
-        inputValueCardCodeSecurity.value
-    ) {
+    if (formIsvalid) {
         form.classList.add("hidden-div");
         success.classList.remove("hidden-div");
     }
