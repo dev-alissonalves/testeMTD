@@ -1,4 +1,4 @@
-# testeMTD
+# testeMTD - Página de checkout de cartão de crédito
 
 Este projeto é uma página de dados de pagamento, criada para cumprir o desafio proposto pela empresa Agência mtd. O objetivo é criar uma página que se pareça o mais próximo possível do layout fornecido e que permita que os usuários preencham um formulário e vejam os dados no cartão atualizados em tempo real.
 
